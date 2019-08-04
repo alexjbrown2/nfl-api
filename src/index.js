@@ -28,10 +28,11 @@ app.use(async (req, res, next) => {
 app.use('/session', routes.session);
 app.use('/users', routes.user);
 app.use('/messages', routes.message);
+app.use('/player', routes.player);
 
 // Start
 
-const eraseDatabaseOnSync = true;
+const eraseDatabaseOnSync = false;
 
 sequelize.sync({ force: eraseDatabaseOnSync }).then(async () => {
   if (eraseDatabaseOnSync) {

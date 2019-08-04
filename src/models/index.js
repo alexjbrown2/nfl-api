@@ -12,6 +12,9 @@ const sequelize = new Sequelize(
 const models = {
   User: sequelize.import('./user'),
   Message: sequelize.import('./message'),
+  Passing: sequelize.import('./passing'),
+  Receiving: sequelize.import('./receiving'),
+  Rushing: sequelize.import('./rushing')
 };
 
 Object.keys(models).forEach(key => {
